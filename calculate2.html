@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+        <ol>
+            <li>first Name: {{firstName}}</li>
+            <li>last Name: {{lastName}}</li>
+            <li>full Name: {{fullName}}</li>
+        </ol>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            firstName: 'Foo',
+            lastName: 'Bar'
+        },
+        computed: {
+            fullName: function() {
+                return this.firstName + this.lastName
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

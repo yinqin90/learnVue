@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>template v-for</title>
+</head>
+
+<body>
+    <div id="example">
+        <ul>
+            <template v-for="item in items">
+                <li>{{ item.msg }}</li>
+                <li class="divider"></li>
+            </template>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: '#example',
+        data: {
+            items: [{
+                msg: 'ceshi 0'
+            }, {
+                msg: 'ceshi 1'
+            }]
+        }
+    })
+    </script>
+</body>
+
+</html>

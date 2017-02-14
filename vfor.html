@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>v-for</title>
+</head>
+
+<body>
+    <ul id="example">
+        <li v-for="(item,index) of items">
+            {{ parentMessage }} - {{ index }} - {{ item.message }}
+        </li>
+    </ul>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#example',
+        data: {
+            parentMessage: 'Parent',
+            items: [{
+                message: "测试1"
+            }, {
+                message: "测试2"
+            }]
+        }
+    })
+    </script>
+</body>
+
+</html>

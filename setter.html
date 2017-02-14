@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>setter</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li>first name : {{firstName}}</li>
+            <li>last name : {{lastName}}</li>
+            <li>full name : {{fullName}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            firstName: 'first',
+            lastName: 'last'
+        },
+        computed: {
+            fullName: function() {
+                get: function() {
+                    return this.firstName + this.lastName
+                },
+                set: function(newValue) {
+                    var names = newValue.split(' ');
+                    this.firstName = names[0];
+                    this.lastName = names[1]
+                }
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

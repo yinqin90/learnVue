@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>events</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="counte">这个按钮被点击了{{counter}}次</button>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            counte: function() {
+                this.counter += 1;
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

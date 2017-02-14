@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>用户输入</title>
+</head>
+
+<body>
+    <div id="app">
+        <P>{{message}}</P>
+        <button v-on:click="changeMessage">click me</button>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: "元数据"
+        },
+        methods: {
+            changeMessage: function() {
+                this.message = "我改变啦!"
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

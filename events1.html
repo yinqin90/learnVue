@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>内联方法处理器</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="say('hi')">hi</button>
+        <button v-on:click="say('hello')">hello</button>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            say: function(message) {
+                alert(message)
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class与Style绑定</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:class="{active:isActive,text-danger:hasError}">测试</div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isActive: true，
+            hasError:false
+        }
+    })
+    </script>
+</body>
+
+</html>

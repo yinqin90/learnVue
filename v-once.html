@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>v-once指令，执行一次性的插值，当数据改变时，插值处的内容不会更新</title>
+</head>
+
+<body>
+    <div id="app">
+        <span v-once>message:{{message}}</span>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: "v-once指令，只会执行一次绑定数据"
+        }
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>组件</title>
+</head>
+
+<body>
+    <div id="app">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+    <!--一个组件实质上是一个拥有预定义选项的Vue实例-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{todo.text}}</li>'
+    });
+    var app = new Vue({
+        el: '#app',
+        data: {
+            groceryList: [{
+                text: 'Vegetables'
+            }, {
+                text: 'Cheese'
+            }, {
+                text: 'Whatever else humans are supposed to eat'
+            }]
+        }
+    })
+    </script>
+</body>
+
+</html>

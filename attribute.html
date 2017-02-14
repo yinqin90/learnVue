@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>attribute属性的绑定</title>
+</head>
+
+<body>
+	<!--
+		v-bind对布尔值的属性也有效，如果值为false的话，该属性会被移除
+	-->
+    <div id="app">
+        <div v-bind:id="dynamicId">动态绑定的属性id</div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            dynamicId: 'dynamicId'
+        }
+    })
+    </script>
+
+    <!--
+    	使用Javascript表达式
+		对于所有的数据绑定，Vue.js都提供了完全的Javascript表达式支持
+		{{number +1}}
+    -->
+
+</body>
+
+</html>
